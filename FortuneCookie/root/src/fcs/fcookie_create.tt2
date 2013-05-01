@@ -1,0 +1,3 @@
+[% META title = 'Create/Edit Fortune Cookie' %]
+
+[% form %]

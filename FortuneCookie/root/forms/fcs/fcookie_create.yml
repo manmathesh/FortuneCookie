@@ -1,0 +1,56 @@
+---
+
+indicator: submit
+
+elements:
+
+    - type: Text
+
+      name: title
+
+      label: Title
+
+      attributes:
+
+        title: Enter Fortune Cookie
+
+      constraints:
+
+        - type: Length
+
+          min: 2
+
+          max: 400
+
+          message: Length must be between 2 and 400 characters
+
+    - type: Select
+
+      name: categories
+
+      label: Category
+
+      multiple: 1
+
+      size: 3
+
+      constraints:
+
+        - Integer
+
+    - type: Submit
+
+      name: submit
+
+      value: Submit
+
+constraints:
+
+    - Required
+
+filter:
+
+    - TrimEdges
+
+    - HTMLEscape
+

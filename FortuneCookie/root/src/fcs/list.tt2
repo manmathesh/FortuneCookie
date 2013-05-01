@@ -1,0 +1,30 @@
+[% META title = 'Fortune Cookie Collection' -%]
+
+<center><table border=1 width=900>
+
+<tr><th>Fortune Cookie's</th><th>Delete</th><th>Edit</th></tr>
+
+[% FOREACH fc IN fcs -%]
+
+<tr>
+
+<td>[% fc.title %]</td>
+
+<td>
+
+<a href="[% c.uri_for(c.controller.action_for('delete'), [fc.id]) %]">Delete</a>
+
+</td>
+
+<td>
+
+<a href="[% c.uri_for(c.controller.action_for('fcookie_edit'),[fc.id]) %]">Edit</a>
+
+</td>
+
+</tr>
+
+[% END -%]
+
+</table>
+</center>
